@@ -4,4 +4,10 @@
   h2 {
     @include h2-title;
   }
+  form {
+    margin: 40px 0 auto auto;
+    .form-actions {
+      margin-bottom: 0;
+    }
+  }
 }

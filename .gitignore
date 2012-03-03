@@ -14,6 +14,10 @@
 /log/*.log
 /tmp
 
+.sass-cache
+app/assets/.DS_Store
+app/assets/stylesheets/.DS_Store
+
 /config/config.yml
 /config/mongoid.yml
 .rvmrc

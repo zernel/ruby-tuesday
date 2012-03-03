@@ -1,0 +1,12 @@
+defaults: &defaults
+  app_name: "Ruby Tuesday"
+  foot_html: "&copy; Ruby Tuesday."
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

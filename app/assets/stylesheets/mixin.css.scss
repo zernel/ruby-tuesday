@@ -1,0 +1,12 @@
+@mixin rounded-conner($pixel) {
+  border-radius: $pixel;
+  -moz-border-radius: $pixel;
+  -webkit-border-radius: $pixel;
+}
+
+@mixin h2-title {
+  text-align: left;
+  padding: 30px 0px 0px 30px;
+  border-bottom: solid 3px #ddd;
+  background-color: #eee;
+}

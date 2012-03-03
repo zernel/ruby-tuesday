@@ -1,0 +1,7 @@
+@import 'mixin';
+
+.sign-in {
+  h2 {
+    @include h2-title;
+  }
+}

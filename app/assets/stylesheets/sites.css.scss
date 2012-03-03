@@ -1,0 +1,12 @@
+@import 'mixin';
+
+body {
+  .content {
+    @include rounded-conner(5px);
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 50px;
+    *zoom: 1;
+    border: solid 1px #ddd;
+  }
+}

@@ -32,7 +32,7 @@ end
 
 group :development, :test do
   gem 'pry'
-  gem 'faker'
+  gem 'ffaker'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'capybara-webkit'

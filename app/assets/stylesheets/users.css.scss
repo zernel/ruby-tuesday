@@ -1,13 +1,29 @@
 @import 'mixin';
 
-.sign-in {
-  h2 {
+.edit-user, .sign-up, .sign-in {
+  width: 500px;
+  margin: 100px auto;
+  border: solid 1px #DDD;
+  @include rounded-conner(5px);
+  h2.title {
     @include h2-title;
   }
   form {
-    margin: 40px 0 auto auto;
+    margin: 20px 0 auto auto;
     .form-actions {
       margin-bottom: 0;
+      a {
+        margin-top: 2px;
+        margin-left: 10px;
+      }
+    }
+  }
+  #error_explanation {
+    width: 360px;
+    margin: 0 auto;
+    h2 {
+      font-size: 20px;
+      color: #C09853;
     }
   }
 }

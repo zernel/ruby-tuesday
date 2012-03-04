@@ -1,17 +1,23 @@
-%h2 Sign up
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email
-  %div
-    = f.label :password
-    %br/
-    = f.password_field :password
-  %div
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation
-  %div= f.submit "Sign up"
-= render "links"
+.sign-up
+  %h2.title 用户注册
+  - if !devise_error_messages!.blank?
+    .alert.alert-block
+      %a{ class: 'close', 'data-dismiss' => 'alert'}×
+      = devise_error_messages!
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    .form-horizontal
+      .control-group
+        = f.label '电子邮箱', class: 'control-label'
+        .controls
+          = f.email_field :email, class: 'input-medium'
+      .control-group
+        = f.label '密码', class: 'control-label'
+        .controls
+          = f.password_field :password, class: 'input-medium'
+      .control-group
+        = f.label '确认密码', class: 'control-label'
+        .controls
+          = f.password_field :password_confirmation, class: 'input-medium'
+      .form-actions
+        = f.submit "注册", class: 'btn btn-primary'
+        = render "links"

@@ -9,16 +9,16 @@ Ruby-Tuesday party. It is in developing.
  * Install and start MongoDB.
 
 ## Setup Guide
-If you are using RVM, run 'cp .rvmrc.example .rvmrc'.
+If you are using RVM, run  `cp .rvmrc.example .rvmrc`.
 
 ```ruby
 cp config/mongoid.yml.default config/mongoid.yml
 cp config/config.yml.default config/config.yml
 ```
 
-and run 'bundle install'
+and run `bundle install`
 
-Done. Run 'rails s' , open your browser and visit 'http://localhost:3000'
+Done. Run `rails s` , open your browser and visit `http://localhost:3000`
 
 ## License
 

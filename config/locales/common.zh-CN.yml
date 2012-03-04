@@ -1,0 +1,5 @@
+"zh-CN":
+  common:
+    register: '注册'
+    login: '登录'
+    remember_me: '记住我'

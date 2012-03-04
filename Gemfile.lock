@@ -77,8 +77,7 @@ GEM
     factory_girl_rails (1.7.0)
       factory_girl (~> 2.6.0)
       railties (>= 3.0.0)
-    faker (1.0.1)
-      i18n (~> 0.4)
+    ffaker (1.13.0)
     ffi (1.0.11)
     haml (3.1.4)
     haml-rails (0.3.4)
@@ -102,10 +101,13 @@ GEM
     mime-types (1.17.2)
     mongo (1.6.0)
       bson (= 1.6.0)
+    mongo-rails-instrumentation (0.2.4)
     mongoid (2.4.5)
       activemodel (~> 3.1)
       mongo (~> 1.3)
       tzinfo (~> 0.3.22)
+    mongoid_auto_increment_id (0.4.0)
+      mongoid (~> 2.4.0)
     multi_json (1.1.0)
     nokogiri (1.5.0)
     orm_adapter (0.0.6)
@@ -168,6 +170,9 @@ GEM
       rubyzip
     settingslogic (2.0.8)
     shoulda-matchers (1.0.0)
+    simple_form (2.0.1)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     simplecov (0.6.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.5.3)
@@ -207,11 +212,13 @@ DEPENDENCIES
   devise
   execjs
   factory_girl_rails
-  faker
+  ffaker
   haml
   haml-rails
   jquery-rails
+  mongo-rails-instrumentation (= 0.2.4)
   mongoid (~> 2.4)
+  mongoid_auto_increment_id (= 0.4.0)
   pry
   quiet_assets!
   rack_session_access
@@ -220,6 +227,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   settingslogic
   shoulda-matchers
+  simple_form
   simplecov
   therubyracer
   uglifier (>= 1.0.3)

@@ -2,6 +2,7 @@ RubyTuesday::Application.routes.draw do
   devise_for :users
 
   root :to => 'sites#index'
+  resources :parties
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

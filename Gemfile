@@ -7,12 +7,16 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'haml-rails'
 
+gem 'simple_form'
+
 # 配置插件
 gem 'settingslogic'
 
 # Mongoid 辅助组件
 gem "mongoid", "~> 2.4"
 gem "bson_ext", "~> 1.5"
+gem 'mongoid_auto_increment_id', "0.4.0"
+gem 'mongo-rails-instrumentation','0.2.4'
 
 # 用户管理
 gem 'devise'
@@ -32,7 +36,7 @@ end
 
 group :development, :test do
   gem 'pry'
-  gem 'faker'
+  gem 'ffaker'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'capybara-webkit'

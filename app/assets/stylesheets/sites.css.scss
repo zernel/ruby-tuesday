@@ -1,12 +1,63 @@
 @import 'mixin';
 
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, em, img, small, strike, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, figcaption, footer, header, hgroup, nav, section, summary, time, mark, audio, video {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  /*font-size: 100%;*/
+  /*font: inherit;*/
+  vertical-align: baseline;
+}
+
 body {
-  .content {
-    @include rounded-conner(5px);
-    width: 940px;
-    margin: 0 auto;
-    margin-top: 50px;
-    *zoom: 1;
-    border: solid 1px #ddd;
+  font: 14px/18px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #333;
+  background-image: url(http://a0.twimg.com/images/themes/theme5/bg.gif);
+  background-position: left 40px;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-color: #352726;
+
+  #page-outer {
+    height: 100%;
+    .wrapper {
+      position: relative;
+      width: 940px;
+      min-height: 100%;
+      padding: 54px 14px 15px;
+      margin: 0 auto;
+      background: url(wash-white.png);
+    }
+    #page-container {
+      zoom: 1;
+      .content {
+        @include rounded-conner(5px);
+        width: 940px;
+        margin: 0 auto;
+        margin-top: 50px;
+        *zoom: 1;
+        border: solid 1px #ddd;
+      }
+      .dashboard {
+        float: left;
+        width: 302px;
+      }
+      .content-main {
+        float: right;
+        width: 522px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+      }
+    }
   }
+}
+/*.module {*/
+  /*text-shadow: 0 1px 0 white;*/
+  /*border: 1px solid #EEE;*/
+  /*border: 1px solid rgba(0, 0, 0, .1)*/
+/*}*/
+.clear {
+  clear: both;
 }

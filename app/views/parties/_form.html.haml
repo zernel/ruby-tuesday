@@ -1,0 +1,15 @@
+= simple_form_for(@party, html: { class: 'form-horizontal', id: 'new-party' }) do |f|
+  - if @party.errors.any?
+    #error_explantation.alert.alert-block
+      %a{ class: 'close', 'data-dismiss' => 'alert'}×
+      %h4= "存在#{@party.errors.count}个错误导致创建失败"
+      %ul
+        - @party.errors.full_messages.each do |msg|
+          %li= msg
+
+  = f.input :topic
+  = f.input :date
+  = f.input :address
+  = f.input :presenter
+  = f.input :introduction
+  = f.submit '创建聚会'

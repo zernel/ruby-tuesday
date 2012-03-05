@@ -6,4 +6,8 @@ class Party
   field :date, :type => String
   field :address, :type => String
   field :introduction
+
+  validates :topic, presence: true
+  validates :date, presence: true
+  validates :address, presence: true
 end

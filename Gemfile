@@ -36,6 +36,7 @@ end
 
 group :development, :test do
   gem 'pry'
+  gem 'thin'
   gem 'ffaker'
   gem 'rspec-rails'
   gem 'capybara'

@@ -12,7 +12,6 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 body {
   font: 14px/18px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #333;
-  background-image: url(http://a0.twimg.com/images/themes/theme5/bg.gif);
   background-position: left 40px;
   background-attachment: fixed;
   background-repeat: repeat;
@@ -51,13 +50,185 @@ body {
         border-radius: 6px;
       }
     }
+    #front-container {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      min-height: 545px;
+      max-height: 750px;
+      .front-card {
+        top: 50%;
+        height: 328px;
+        width: 838px;
+        margin: -154px 0 0 -418px;
+        position: absolute;
+        left: 50%;
+        .front-welcome {
+          @include rounded-conner(4px);
+          -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.2),0 0 125px rgba(255,190,43,.35);
+          -moz-box-shadow: 0 1px 0 rgba(0,0,0,.2),0 0 125px rgba(255,190,43,.35);
+          box-shadow: 0 1px 0 rgba(0,0,0,.2),0 0 125px rgba(255,190,43,.35);
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 520px;
+          height: 328px;
+          background: black url(city-balcony.jpg) no-repeat left top;
+          border: 0;
+          .front-welcome-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 470px;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 22px;
+            color: #EEE;
+            text-align: left;
+            text-shadow: black 0 1px 2px;
+            h1 {
+              margin-bottom: 2px;
+              font-size: 25px;
+              font-weight: 700;
+              color: white;
+              display: block;
+              -webkit-margin-before: 0.67em;
+              -webkit-margin-after: 0.67em;
+              -webkit-margin-start: 0px;
+              -webkit-margin-end: 0px;
+              font-weight: bold;
+            }
+            p {
+              display: block;
+              -webkit-margin-before: 1em;
+              -webkit-margin-after: 1em;
+              -webkit-margin-start: 0px;
+              -webkit-margin-end: 0px;
+            }
+          }
+        }
+        .front-signin, .front-signup {
+          @include rounded-conner(4px);
+          background: white;
+          background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,white),color-stop(100%,#DDD));
+          background: -webkit-linear-gradient(top,white 0,#DDD 100%);
+          background: -moz-linear-gradient(top,white 0,#DDD 100%);
+          background: -ms-linear-gradient(top,white 0,#DDD 100%);
+          background: -o-linear-gradient(top,white 0,#DDD 100%);
+          background: linear-gradient(top,white 0,#DDD 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#dddddd',GradientType=0);
+          border-left: solid 1px #EEE;
+          border-right: solid 1px #EEE;
+          border-bottom: solid 1px #CCC;
+          -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1);
+          -moz-box-shadow: 0 1px 0 rgba(0,0,0,.1);
+          box-shadow: 0 1px 0 rgba(0,0,0,.1);
+        }
+        .front-signin {
+          position: absolute;
+          top: 0;
+          left: 536px;
+          width: 300px;
+          height: 108px;
+          .placeholding-input {
+            height: 30px;
+          }
+          .login-name {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 276px;
+            color: #999;
+            font-size: 13px;
+            input {
+              width: 266px;
+            }
+          }
+          .password-signin {
+            border-collapse: collapse;
+            border-spacing: 0;
+            position: absolute;
+            top: 48px;
+            left: 12px;
+            width: 276px;
+          }
+          .remember-forgot {
+            position: absolute;
+            top: 82px;
+            left: 12px;
+            margin: 0;
+            width: 276px;
+            .remember {
+              font-size: 11px;
+              line-height: 13px;
+              color: #999;
+              text-shadow: 0 1px 0 rgba(255, 255, 255, .6)
+            }
+            .separator {
+              margin: 0 1px 0 2px;
+              font-weight: bold;
+              color: #999;
+            }
+            .forgot {
+              display: inline;
+              margin: 0;
+              font-size: 11px;
+              line-height: 13px;
+              color: #999;
+              -webkit-text-shadow: 0 1px 0 rgba(255,255,255,.6);
+              -moz-text-shadow: 0 1px 0 rgba(255,255,255,.6);
+              text-shadow: 0 1px 0 rgba(255, 255, 255, .6)
+            }
+          }
+        }
+        .front-signup {
+          position: absolute;
+          top: 121px;
+          left: 536px;
+          width: 300px;
+          height: 206px;
+        }
+      }
+      .footer {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        font-size: 11px;
+        color: #333;
+        text-align: center;
+        color: rgba(255, 255, 255, .15);
+        margin-left: 0;
+        ul {
+          display: inline-block;
+          list-style: none;
+          li {
+            display: inline;
+            margin: 0 3px;
+            a {
+              color: rgba(255, 255, 255, .3);
+              -webkit-transition: color .2s linear;
+              -moz-transition: color .2s linear;
+              transition: color .2s linear;
+            }
+          }
+        }
+      }
+    }
   }
 }
-/*.module {*/
-  /*text-shadow: 0 1px 0 white;*/
-  /*border: 1px solid #EEE;*/
-  /*border: 1px solid rgba(0, 0, 0, .1)*/
-/*}*/
+.flex-table-primary {
+  width: 99%;
+  padding-right: 5px;
+}
+.flex-table-secondary {
+  width: 1%;
+  max-width: 1%;
+}
 .clear {
   clear: both;
 }

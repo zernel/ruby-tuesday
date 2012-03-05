@@ -1,0 +1,19 @@
+.front-signin
+  %form{ action: '/user/sign_in', method: 'post', class: 'signin'}
+    .placeholding-input.login-name
+      %input{ type: 'text', class: 'email-input', name: 'email', placeholder: "Email" }
+    %table.flex-table.password-signin
+      %tbody
+        %tr
+          %td.flex-table-primary
+            .placeholding-input.password.flex-table-form
+              %input{ type: 'password', class: 'text-input flex-table-input', name: 'email', placeholder: "Password" }
+          %td.flex-table-secondary
+            %input{ type: 'submit', class: 'btn-info', value: 'Sign in' }
+    .remember-forgot
+      %label.remember.checkbox
+        %input{ type: 'checkbox', value: '1', name: 'remember_me' }
+        %span Remember me
+        %span.separator ·
+        = link_to 'Forget password?', '#', class: 'forgot'
+

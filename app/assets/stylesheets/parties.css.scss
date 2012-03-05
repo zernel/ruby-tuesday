@@ -1,0 +1,11 @@
+@import 'mixin';
+
+.new-party {
+  width: 500px;
+  margin: 100px auto;
+  border: solid 1px #DDD;
+  @include rounded-conner(5px);
+  h2.title {
+    @include h2-title
+  }
+}

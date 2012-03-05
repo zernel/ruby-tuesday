@@ -1,8 +1,3 @@
 .new-party
-  = simple_form_for(@party, html: { class: 'form-horizontal', id: 'new-party' }) do |f|
-    = f.input :topic
-    = f.input :presenter
-    = f.input :date
-    = f.input :address
-    = f.input :introduction
-    = f.submit '创建聚会'
+  %h2.title 发起新聚会
+  = render 'form'

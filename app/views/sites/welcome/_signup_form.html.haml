@@ -1,0 +1,12 @@
+.front-signup
+  %h2<
+    %strong= t('common.have_not_account')
+    = t('common.register_now')
+  = form_tag user_registration_path, class: 'signup' do
+    .placeholding-input
+      = text_field_tag 'user[nickname]', nil, class: 'text-input', autocomplete: 'off', placeholder: t('mongoid.attributes.user.nickname')
+    .placeholding-input
+      = text_field_tag 'user[email]', nil, class: 'text-input email-input', autocomplete: 'off', placeholder: t('mongoid.attributes.user.email')
+    .placeholding-input
+      = password_field_tag 'user[password]', nil, class: 'text-input', placeholder: t('mongoid.attributes.user.password')
+    %input{ type: 'submit', class: 'btn signup-btn', value: t('common.register') }

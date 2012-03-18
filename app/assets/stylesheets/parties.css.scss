@@ -5,7 +5,11 @@
   margin: 100px auto;
   border: solid 1px #DDD;
   @include rounded-conner(5px);
+  background-color: white;
   h2.title {
     @include h2-title
+  }
+  form {
+    padding-top: 20px;
   }
 }

@@ -1,0 +1,18 @@
+.front-signin
+  = form_tag user_session_path, class: 'signin' do
+    .placeholding-input.login-name
+      = text_field_tag 'user[email]', nil, class: 'email-input', placeholder: t('mongoid.attributes.user.email')
+    %table.flex-table.password-signin
+      %tbody
+        %tr
+          %td.flex-table-primary
+            .placeholding-input.password.flex-table-form
+              = password_field_tag 'user[password]', nil, class: 'text-input flex-table-input', placeholder: t('mongoid.attributes.user.password')
+          %td.flex-table-secondary
+            %input.btn-info{ type: 'submit', value: t('common.login') }
+    .remember-forgot
+      %label.remember.checkbox
+        = check_box_tag 'user[remember_me]'
+        %span= t('common.remember_me')
+        %span.separator ·
+        = link_to t('common.forget_password'), new_password_path('user'), class: 'forgot'

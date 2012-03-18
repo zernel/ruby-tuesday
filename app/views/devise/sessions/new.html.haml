@@ -1,20 +1,21 @@
-.sign-in
-  %h2.title= t('common.login')
-  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    .form-horizontal
-      .control-group
-        = f.label :email, class: 'control-label'
-        .controls
-          = f.email_field :email, class: 'input-medium'
-      .control-group
-        = f.label :password, class: 'control-label'
-        .controls
-          = f.password_field :password, class: 'input-medium'
-      .control-group
-        .controls
-          %label.checkbox
-            = f.check_box :remember_me
-            = t('common.remember_me')
-      .form-actions
-        = f.submit t('common.login'), class: 'btn btn-primary'
-        = render "links"
+#page-container.devise.wrapper
+  .sign-in
+    %h2.title= t('common.login')
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .form-horizontal
+        .control-group
+          = f.label :email, class: 'control-label'
+          .controls
+            = f.email_field :email, class: 'input-medium'
+        .control-group
+          = f.label :password, class: 'control-label'
+          .controls
+            = f.password_field :password, class: 'input-medium'
+        .control-group
+          .controls
+            %label.checkbox
+              = f.check_box :remember_me
+              = t('common.remember_me')
+        .form-actions
+          = f.submit t('common.login'), class: 'btn btn-primary'
+          = render "links"

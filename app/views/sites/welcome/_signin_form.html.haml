@@ -9,7 +9,7 @@
             .placeholding-input.password.flex-table-form
               = password_field_tag 'user[password]', nil, class: 'text-input flex-table-input', placeholder: t('mongoid.attributes.user.password')
           %td.flex-table-secondary
-            %input{ type: 'submit', class: 'btn-info', value: t('common.login') }
+            %input.btn-info{ type: 'submit', value: t('common.login') }
     .remember-forgot
       %label.remember.checkbox
         = check_box_tag 'user[remember_me]'

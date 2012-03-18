@@ -5,7 +5,7 @@
     attributes:
       user:
         name: "名字"
-        login: "用户名"
+        nickname: "昵称"
         email: "电子邮箱"
         avatar: "头像"
         location: "城市"

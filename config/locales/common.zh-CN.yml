@@ -3,3 +3,4 @@
     register: '注册'
     login: '登录'
     remember_me: '记住我'
+    forget_password: '忘记密码？'

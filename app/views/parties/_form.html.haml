@@ -1,4 +1,4 @@
-= simple_form_for(@party, html: { class: 'form-horizontal', id: 'new-party' }) do |f|
+= simple_form_for(@party, html: { class: 'form-horizontal' }) do |f|
   - if @party.errors.any?
     #error_explantation.alert.alert-block
       %a{ class: 'close', 'data-dismiss' => 'alert'}×
@@ -6,10 +6,12 @@
       %ul
         - @party.errors.full_messages.each do |msg|
           %li= msg
-
-  = f.input :topic
-  = f.input :date
-  = f.input :address
-  = f.input :presenter
-  = f.input :introduction
-  = f.submit '创建聚会'
+  %fieldset
+    = f.input :topic
+    = f.input :date
+    = f.input :address
+    = f.input :presenter
+    = f.input :introduction
+  .form-actions
+    = f.submit t('common.create_party'), class: 'btn-primary'
+    = link_to t('common.cancel'), root_path, class: 'btn'

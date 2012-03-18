@@ -15,11 +15,9 @@ class PartiesController < ApplicationController
 
     respond_to do |format|
       if @party.save
-        binding.pry
         format.html { redirect_to @party, notice: '成功发起聚会' }
         format.json { render json: @party, status: :created, location: @party }
       else
-        binding.pry
         format.html { render aciton: 'new' }
         format.json { render json: @party.errors, status: :unprocessable_entity }
       end

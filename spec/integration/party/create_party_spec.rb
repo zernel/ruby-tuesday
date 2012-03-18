@@ -10,7 +10,7 @@ feature 'create party' do
   scenario 'by user' do
     visit new_party_path
 
-    within('#new-party') do
+    within('.new-party') do
       #select('杭州', :from => 'district')
       fill_in 'party_topic', with: 'Javascript MVC'
       fill_in 'party_presenter', with: '@nowazhu'

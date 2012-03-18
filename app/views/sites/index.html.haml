@@ -1,17 +1,5 @@
-- if user_signed_in?
-  #page-container.home-container.wrapper
-    .dashboard
-      %h1 Sites#index
-    .content-main
-      %p Find me in app/views/sites/index.html.haml
-- else
-  #front-container
-    .front-card
-      .front-welcome
-        .front-welcome-text
-          %h1 Welcome to Ruby Tuesday
-          %p Ruby-Tuesday is a light weight plaform for rubyist organize the Ruby-Tuesday party. It is in developing. 
-      = render 'signin_form'
-      = render 'signup_form'
-    = render 'footer'
-.clear
+#page-container.home-container.wrapper
+  .dashboard
+    %h1 Sites#index
+  .content-main
+    %p Find me in app/views/sites/index.html.haml

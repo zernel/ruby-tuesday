@@ -18,6 +18,7 @@ describe PartiesController do
     it { should respond_with_content_type /json/ }
   end
 
+
   describe 'POST create' do
     context 'with valid params' do
       before(:each) do

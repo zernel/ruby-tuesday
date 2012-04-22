@@ -1,4 +1,9 @@
 #page-container.home-container.wrapper
   .list-party
+    %h3#title 聚会列表
     - @parties.each do |party|
-      %h3= party.topic
+      .party-info
+        %h3= link_to party.title, party_path(party)
+        %h4= party.introduction
+        = link_to '查看详情>>', party_path(party), class: 'more'
+    = paginate @parties

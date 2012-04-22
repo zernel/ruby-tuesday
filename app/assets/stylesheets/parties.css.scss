@@ -13,3 +13,21 @@
     padding-top: 20px;
   }
 }
+
+.list-party {
+  background-color: white;
+  @include rounded-conner(5px);
+  width: 650px;
+  h3#title {
+    padding: 15px;
+    border-bottom: 2px solid #E8E8E8;
+  }
+  .party-info {
+    padding: 10px;
+    border-bottom: 1px solid #E8E8E8;
+    .more {
+      display: block;
+      text-align: right;
+    }
+  }
+}

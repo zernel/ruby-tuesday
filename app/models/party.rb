@@ -1,7 +1,7 @@
 class Party
   include Mongoid::Document
 
-  paginates_per 5
+  paginates_per 8
 
   field :topic, :type => String
   field :location, :type => String

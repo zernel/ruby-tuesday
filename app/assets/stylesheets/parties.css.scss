@@ -14,20 +14,54 @@
   }
 }
 
-.list-party {
+.context {
+  float: left;
   background-color: white;
   @include rounded-conner(5px);
-  width: 650px;
-  h3#title {
-    padding: 15px;
-    border-bottom: 2px solid #E8E8E8;
-  }
-  .party-info {
-    padding: 10px;
-    border-bottom: 1px solid #E8E8E8;
-    .more {
-      display: block;
-      text-align: right;
+  width: 700px;
+  .list-party {
+    h3#title {
+      padding: 15px;
+      border-bottom: 2px solid #E8E8E8;
     }
+    .party-info {
+      padding: 10px;
+      border-bottom: 1px solid #E8E8E8;
+      .more {
+        display: block;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.sidebar {
+  float: right;
+  width: 230px;
+  .public-notice {
+    background-color: white;
+    @include rounded-conner(5px);
+    margin-bottom: 10px;
+    h4 {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #E8E8E8;
+    }
+    h5 {
+      padding: 5px;
+      a.btn-danger {
+        margin: 0 70px;
+      }
+      span {
+        margin: 50px;
+      }
+    }
+  }
+  .launch-party {
+    background-color: white;
+    @include rounded-conner(5px);
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
   }
 }

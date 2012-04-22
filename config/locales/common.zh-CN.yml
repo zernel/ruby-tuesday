@@ -8,4 +8,7 @@
     register_now: '现在注册'
     new_party: '发起新聚会'
     create_party: '创建聚会'
+    launch_party: '发起聚会'
+    list_party: '聚会列表'
     cancel: '取消'
+    see_more: '查看详情'

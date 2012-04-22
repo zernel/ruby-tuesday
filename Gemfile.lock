@@ -248,6 +248,7 @@ DEPENDENCIES
   haml
   haml-rails
   jquery-rails
+  kaminari
   mongo-rails-instrumentation (= 0.2.4)
   mongoid (~> 2.4)
   mongoid_auto_increment_id (= 0.4.0)

@@ -22,6 +22,9 @@ gem 'mongo-rails-instrumentation','0.2.4'
 gem 'devise'
 gem 'cancan'
 
+# 分页
+gem 'kaminari'
+
 # 后台管理
 gem 'rails_admin'
 

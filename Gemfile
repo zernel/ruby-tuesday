@@ -1,5 +1,5 @@
-source 'http://ruby.taobao.org'
-#source 'https://rubygems.org'
+#source 'http://ruby.taobao.org'
+source 'https://rubygems.org'
 
 gem 'rails', '3.2.2'
 
@@ -21,6 +21,9 @@ gem 'mongo-rails-instrumentation','0.2.4'
 # 用户管理
 gem 'devise'
 gem 'cancan'
+
+# 分享功能
+gem "social-share-button", "~> 0.0.3" 
 
 # 分页
 gem 'kaminari'

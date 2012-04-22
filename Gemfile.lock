@@ -5,7 +5,7 @@ GIT
     quiet_assets (0.0.1)
 
 GEM
-  remote: http://ruby.taobao.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (3.2.2)
       actionpack (= 3.2.2)
@@ -206,6 +206,7 @@ GEM
       simplecov-html (~> 0.5.3)
     simplecov-html (0.5.3)
     slop (2.4.4)
+    social-share-button (0.0.3)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -263,6 +264,7 @@ DEPENDENCIES
   shoulda-matchers
   simple_form
   simplecov
+  social-share-button (~> 0.0.3)
   therubyracer
   thin
   uglifier (>= 1.0.3)

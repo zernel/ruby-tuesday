@@ -14,12 +14,12 @@
   }
 }
 
-.context {
+.main-content {
   float: left;
-  background-color: white;
-  @include rounded-conner(5px);
   width: 700px;
   .list-party {
+    @include rounded-conner(5px);
+    background-color: white;
     h3#title {
       padding: 15px;
       border-bottom: 2px solid #E8E8E8;
@@ -32,6 +32,40 @@
         text-align: right;
       }
     }
+  }
+  .show-party {
+    background-color: white;
+    @include rounded-conner(5px);
+    h3 {
+      @include rounded-conner(5px);
+      text-align: left;
+      padding: 15px 0px 0px 15px;
+      border-bottom: solid 3px #ccc;
+      background-color: #eee;
+    }
+    .party-detail {
+      .fix-line {
+        padding: 10px;
+        margin: 0 5px;
+        label {
+          font-weight: bold;
+          font-size: 120%;
+        }
+      }
+      .regist-and-share {
+        padding: 10px;
+        margin: 0 5px;
+        text-align: right;
+        a#regist-party {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  .reply-party {
+    background-color: white;
+    @include rounded-conner(5px);
+    margin: 10px 0;
   }
 }
 
@@ -57,7 +91,7 @@
       }
     }
   }
-  .launch-party {
+  .launch-party, .regist-party {
     background-color: white;
     @include rounded-conner(5px);
     padding: 10px;

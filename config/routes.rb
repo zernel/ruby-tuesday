@@ -1,10 +1,11 @@
 RubyTuesday::Application.routes.draw do
+  root :to => 'sites#index'
+  devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  devise_for :users
-
-  root :to => 'sites#index'
   resources :parties
+
+  get 'welcome' => 'sites#welcome'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

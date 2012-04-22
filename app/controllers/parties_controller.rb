@@ -1,6 +1,7 @@
 #encoding: UTF-8
-
 class PartiesController < ApplicationController
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
+
   def index
     @parties = Party.all.page params[:page]
 

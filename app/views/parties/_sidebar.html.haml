@@ -1,0 +1,20 @@
+.sidebar
+  - if params[:action] == 'index'
+    .launch-party
+      %a.btn.btn-success{'data-toggle' => 'modal', href: '#launch-party' }= t('common.launch_party')
+    = render 'new_modal'
+  -elsif params[:action] == 'show'
+    .regist-party
+      = link_to '报名参加', '#', class: 'btn btn-warning', id: 'regist-party', party_id: params[:id]
+
+  .public-notice
+    %h4 Ruby Tuesday
+    %h5 这是一个提供给大家组织聚会的平台，enjoy it, let's go party!
+    - unless user_signed_in?
+      %h5<
+        = link_to '现在注册', new_user_registration_path, class: 'btn btn-danger'
+        %span<
+          已有账号？现在
+          = link_to '登录', new_user_session_path
+.clear
+

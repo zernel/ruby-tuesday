@@ -1,5 +1,5 @@
 #page-container.home-container.wrapper
-  .context
+  .main-content
     .list-party
       %h3#title= t('common.list_party')
       - @parties.each do |party|
@@ -7,16 +7,4 @@
           %h3= link_to party.title, party_path(party)
           %h4= party.introduction
       = paginate @parties
-  .sidebar
-    .launch-party
-      = link_to t('common.launch_party'), new_party_path, class: 'btn  btn-success'
-    .public-notice
-      %h4 Ruby Tuesday
-      %h5 这是一个提供给大家组织聚会的平台，enjoy it, let's go party!
-      - unless user_signed_in?
-        %h5<
-          = link_to '现在注册', new_user_registration_path, class: 'btn btn-danger'
-          %span<
-            已有账号？现在
-            = link_to '登录', new_user_session_path
-  .clear
+  = render 'sidebar'

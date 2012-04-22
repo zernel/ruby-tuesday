@@ -1,0 +1,34 @@
+#launch-party.modal
+  .modal-header
+    %a.close{ href: '#', 'data-dismiss' => "modal" }×
+    %h3= t('common.new_party')
+  .modal-body
+    .form-horizontal
+      %fieldset
+        .control-group
+          = label_tag :location, t('mongoid.attributes.party.location'), class: 'control-label'
+          .controls
+            = text_field_tag :location
+        .control-group
+          = label_tag :topic, t('mongoid.attributes.party.topic'), class: 'control-label'
+          .controls
+            = text_field_tag :topic
+        .control-group
+          = label_tag :date, t('mongoid.attributes.party.date'), class: 'control-label'
+          .controls
+            = text_field_tag :date
+        .control-group
+          = label_tag :address, t('mongoid.attributes.party.address'), class: 'control-label'
+          .controls
+            = text_field_tag :address
+        .control-group
+          = label_tag :presenter, t('mongoid.attributes.party.presenter'), class: 'control-label'
+          .controls
+            = text_field_tag :presenter
+        .control-group
+          = label_tag :introduction, t('mongoid.attributes.party.introduction'), class: 'control-label'
+          .controls
+            = text_area_tag :introduction
+  .modal-footer
+    %a.btn{ href: '#' } Close
+    %a.btn.btn-primary{ href: '#' } Save

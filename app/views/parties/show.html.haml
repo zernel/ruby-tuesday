@@ -1,0 +1,11 @@
+#page-container.home-container.wrapper
+  .show-party
+    %h3= @party.topic
+    %label= t('mongoid.attributes.party.date')
+    %span= @party.date
+    %label= t('mongoid.attributes.party.address')
+    %span= @party.address
+    %label= t('mongoid.attributes.party.presenter')
+    %span= @party.presenter
+    %label= t('mongoid.attributes.party.introduction')
+    %span= @party.introduction

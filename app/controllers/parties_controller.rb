@@ -1,6 +1,15 @@
 #encoding: UTF-8
 
 class PartiesController < ApplicationController
+  def index
+    @parties = Party.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @parties }
+    end
+  end
+
   def new
     @party = Party.new
 

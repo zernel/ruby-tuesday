@@ -2,6 +2,7 @@
   mongoid:
     models:
       user: "用户"
+      party: "聚会"
     attributes:
       user:
         name: "名字"
@@ -19,12 +20,18 @@
         verified: "信任用户"
         remember_me: '记住登陆状态'
         current_password: '旧密码'
+        sign_in_count: '登录次数'
+        last_sign_in_at: '最后一次登录时间'
+        current_sign_in_ip: '当前登录IP'
+        current_sign_in_at: '当前登录时间'
+        last_sign_in_ip: '最后一次登录IP'
       party:
         topic: '聚会主题'
         presenter: '主持人'
         date: '举办日期'
         address: '举办地址'
         introduction: '聚会介绍'
+        location: '城市'
     errors:
       models:
         user: '用户'

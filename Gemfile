@@ -22,6 +22,12 @@ gem 'mongo-rails-instrumentation','0.2.4'
 gem 'devise'
 gem 'cancan'
 
+# 分页
+gem 'kaminari'
+
+# 后台管理
+gem 'rails_admin'
+
 # 禁用 assets 日志
 gem 'quiet_assets', :git => 'git://github.com/AgilionApps/quiet_assets.git'
 

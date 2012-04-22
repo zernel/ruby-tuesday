@@ -2,7 +2,7 @@
 
 class PartiesController < ApplicationController
   def index
-    @parties = Party.all
+    @parties = Party.all.page params[:page]
 
     respond_to do |format|
       format.html

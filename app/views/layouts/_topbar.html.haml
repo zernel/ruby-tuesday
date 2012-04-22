@@ -3,17 +3,20 @@
     .container
       = link_to 'Ruby Tuesday', root_path, class: 'brand'
       .nav-collapse
-        -#%ul.nav
-          -#%li= link_to '社区', root_path
+        %ul.nav
+          %li= link_to '聚会', parties_path
         %ul.nav.pull-right
           - if user_signed_in?
+            %li= link_to "您好，#{current_user.nickname}", '#'
             %li.dropdown
               %a{ href: '#', class: 'dropdown-toggle', id: 'toolkit', 'data-toggle' => 'dropdown'}<
                 = image_tag 'toolkit-icon.png'
                 %b.caret
               %ul.dropdown-menu
+                - if current_user.admin?
+                  %li= link_to '后台管理', rails_admin_path
                 %li= link_to('我的账户', edit_user_registration_path)
                 %li= link_to('退出', destroy_user_session_path, :method => :delete)
-          -#- else
-            -#%li= link_to('登录', new_user_session_path)
-            -#%li= link_to('注册', new_user_registration_path)
+          - else
+            %li= link_to('登录', new_user_session_path)
+            %li= link_to('注册', new_user_registration_path)

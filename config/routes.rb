@@ -3,7 +3,10 @@ RubyTuesday::Application.routes.draw do
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  resources :parties
+  resources :parties do
+    post 'modal_create', on: :collection
+  end
+  resources :comments
 
   get 'welcome' => 'sites#welcome'
 

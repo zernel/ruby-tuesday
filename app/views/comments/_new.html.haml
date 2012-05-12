@@ -1,0 +1,6 @@
+.new-comment
+  %h4 发表您的评论:
+  = form_for :comment, url: comments_path, remote: true do |f|
+    = f.text_area :body, class: 'input-xlarge'
+    = f.hidden_field :party_id, value: @party.id
+    = f.submit '评论', class: 'btn btn-primary'

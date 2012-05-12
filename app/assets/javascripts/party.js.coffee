@@ -1,4 +1,2 @@
 jQuery ->
-  jQuery('#launch-party').modal({
-      keyboard: false
-  })
+  jQuery('#launch-party').hide()

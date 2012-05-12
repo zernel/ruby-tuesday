@@ -62,7 +62,7 @@
       }
     }
   }
-  .reply-party {
+  #reply-party {
     background-color: white;
     @include rounded-conner(5px);
     margin: 10px 0;
@@ -98,4 +98,33 @@
     margin-bottom: 10px;
     text-align: center;
   }
+}
+#reply-party {
+  h3 {
+    @include rounded-conner(5px);
+    text-align: left;
+    padding: 10px 0px 0px 10px;
+    border-bottom: solid 1px #ccc;
+    background-color: #eee;
+  }
+  .comment-list {
+    margin: 10px 0;
+    .comment-show {
+      padding: 5px 10px;
+      border-bottom: dotted 1px #ccc;
+      .body {
+        padding: 10px;
+      }
+    }
+  }
+  .new-comment {
+    margin: 10px;
+    textarea {
+      height: 50px;
+      width: 578px;
+    }
+  }
+}
+h4.annotate {
+  padding: 10px 0px 0px 10px;
 }

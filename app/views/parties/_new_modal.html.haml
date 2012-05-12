@@ -2,33 +2,34 @@
   .modal-header
     %a.close{ href: '#', 'data-dismiss' => "modal" }×
     %h3= t('common.new_party')
-  .modal-body
-    .form-horizontal
-      %fieldset
-        .control-group
-          = label_tag :location, t('mongoid.attributes.party.location'), class: 'control-label'
-          .controls
-            = text_field_tag :location
-        .control-group
-          = label_tag :topic, t('mongoid.attributes.party.topic'), class: 'control-label'
-          .controls
-            = text_field_tag :topic
-        .control-group
-          = label_tag :date, t('mongoid.attributes.party.date'), class: 'control-label'
-          .controls
-            = text_field_tag :date
-        .control-group
-          = label_tag :address, t('mongoid.attributes.party.address'), class: 'control-label'
-          .controls
-            = text_field_tag :address
-        .control-group
-          = label_tag :presenter, t('mongoid.attributes.party.presenter'), class: 'control-label'
-          .controls
-            = text_field_tag :presenter
-        .control-group
-          = label_tag :introduction, t('mongoid.attributes.party.introduction'), class: 'control-label'
-          .controls
-            = text_area_tag :introduction
-  .modal-footer
-    %a.btn{ href: '#' } Close
-    %a.btn.btn-primary{ href: '#' } Save
+  = form_for :party, url: parties_path do |f|
+    .modal-body
+      .form-horizontal
+        %fieldset
+          .control-group
+            = f.label :location, t('mongoid.attributes.party.location'), class: 'control-label'
+            .controls
+              = f.text_field :location
+          .control-group
+            = f.label :topic, t('mongoid.attributes.party.topic'), class: 'control-label'
+            .controls
+              = f.text_field :topic
+          .control-group
+            = f.label :date, t('mongoid.attributes.party.date'), class: 'control-label'
+            .controls
+              = f.text_field :date
+          .control-group
+            = f.label :address, t('mongoid.attributes.party.address'), class: 'control-label'
+            .controls
+              = f.text_field :address
+          .control-group
+            = f.label :presenter, t('mongoid.attributes.party.presenter'), class: 'control-label'
+            .controls
+              = f.text_field :presenter
+          .control-group
+            = f.label :introduction, t('mongoid.attributes.party.introduction'), class: 'control-label'
+            .controls
+              = f.text_area :introduction, cols: 0, rows: 0
+    .modal-footer
+      %a.btn{ href: '#', 'data-dismiss' => 'modal'  } 关闭
+      = f.submit '发起', class: 'btn btn-primary'

@@ -1,5 +1,7 @@
 class User
   include Mongoid::Document
+  has_many :comments
+  has_many :parties
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable, :validatable and :omniauthable
   devise :database_authenticatable, :registerable,

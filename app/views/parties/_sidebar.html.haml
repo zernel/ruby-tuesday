@@ -1,7 +1,7 @@
 .sidebar
   - if params[:action] == 'index'
     .launch-party
-      %a.btn.btn-success{'data-toggle' => 'modal', href: '#launch-party' }= t('common.launch_party')
+      %a.btn.btn-success{'data-toggle' => 'modal', href: '#launch-party', id: '#launch-party-btn' }= t('common.launch_party')
     = render 'new_modal'
   -elsif params[:action] == 'show'
     .regist-party

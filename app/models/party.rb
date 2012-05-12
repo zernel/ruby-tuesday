@@ -1,8 +1,11 @@
 class Party
   include Mongoid::Document
+  belongs_to :user
+  has_many :comments
 
-  paginates_per 8
+  paginates_per 6
 
+  field :user_id, :type => Integer
   field :topic, :type => String
   field :location, :type => String
   field :presenter, :type => String

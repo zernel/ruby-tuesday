@@ -1,0 +1,19 @@
+%h3= t('common.comment')
+-  if @party.comments.blank?
+  %h4.annotate 尚未有人评论
+-else
+  .comment-list
+    - @party.comments.each do |comment|
+      .comment-show.fix-line
+        %h4= comment.user.nickname
+        .body
+          %p= comment.body
+- if user_signed_in?
+  = render 'comments/new'
+- else
+  %h4.annotate<
+    需要
+    = link_to '登录', new_user_session_path, class: 'btn btn-success'
+    后回复方可回复, 如果你还没有账号你可以
+    = link_to '注册', new_user_registration_path, class: 'btn btn-danger'
+    一个帐号。

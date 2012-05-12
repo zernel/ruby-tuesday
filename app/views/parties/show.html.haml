@@ -17,7 +17,6 @@
           %span= @party.introduction
         .regist-and-share
           = social_share_button_tag(@party.title)
-    .reply-party
-      -#TODO
-      %h3 TODO reply
+    #reply-party
+      = render 'comments/list'
   = render 'sidebar'

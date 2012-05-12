@@ -3,26 +3,28 @@
     %h2.title 账户管理
     = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
       = devise_error_messages!
-      %div
-        = f.label :email
-        %br/
-        = f.email_field :email
-      %div
-        = f.label :password
-        %i (leave blank if you don't want to change it)
-        %br/
-        = f.password_field :password, :autocomplete => "off"
-      %div
-        = f.label :password_confirmation
-        %br/
-        = f.password_field :password_confirmation
-      %div
-        = f.label :current_password
-        %i (we need your current password to confirm your changes)
-        %br/
-        = f.password_field :current_password
-      %div= f.submit "Update"
-    %h3 Cancel my account
-    %p
-      Unhappy? #{link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete}.
-    = link_to "Back", :back
+      .form-horizontal
+        .control-group
+          = f.label :email, class: 'control-label'
+          .controls
+            = f.email_field :email, disabled: 'disable'
+        .control-group
+          = f.label :nickname, class: 'control-label'
+          .controls
+            = f.text_field :nickname
+        .control-group
+          = f.label :password, class: 'control-label'
+          .controls
+            = f.password_field :password, :autocomplete => "off"
+        .control-group
+          = f.label :password_confirmation, class: 'control-label'
+          .controls
+            = f.password_field :password_confirmation
+        .control-group
+          = f.label :current_password, class: 'control-label'
+          .controls
+            = f.password_field :current_password
+        .form-actions
+          = f.submit "更新", class: 'btn btn-primary'
+          = link_to "返回", :back, class: 'btn'
+          = link_to "注销账号", registration_path(resource_name), :confirm => "请问您确定要注销账号吗?", :method => :delete, class: 'btn btn-danger'
